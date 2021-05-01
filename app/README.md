@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Signature Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is simple UI that generates signature for provided private key and message.
 
-## Available Scripts
+## Insall
 
-In the project directory, you can run:
+Make sure that `elliptic-curve` package is located in the same folder as current project and that it's built. Follow instructions in `elliptic-curve` project to learn how to build it.
 
-### `yarn start`
+Run command to install all required dependencies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+yarn install
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Run
 
-### `yarn test`
+To run an app, execute following command:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+yarn start
+```
 
-### `yarn build`
+## NOTE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Private key should be in HEX formated. You can checkout following datasets for testing:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+Private Key:
+03c1e9550e66958296d11b60f8e8e7a7ad990d07fa65d5f7652c4a6c87d4e3cc
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Message:
+Hello World
 
-### `yarn eject`
+Output:
+{
+  "r":"0x050df7b9c226c8a6a21a9c9fdf4dc76f0a1fb77ef9c5ac4795f4d8b070176efd","w":"0x03004246e5e23c6b6d6112cc2fd5256d7c26cca9aca8c37de912175cf26cf101"
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## TODO
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Add validation if input fields
+2. Add more tests
